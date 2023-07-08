@@ -1,2 +1,2 @@
 #!/bin/bash
-Hello world $PYCODE
+Hello world >>> $PYCODE
