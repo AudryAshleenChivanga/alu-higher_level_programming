@@ -9,4 +9,5 @@ output = ""
 for letter in range(97, 123):
     if chr(letter) not in ['q', 'e']:
         output += "{}".format(chr(letter))
-print("{}".format(output))  # Print the output without a new line
+
+print(output, end='')  # Print the output without a new line
