@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# The powers
+# This is for using python powers
 
 
 def pow(a, b):
@@ -12,4 +12,4 @@ def pow(a, b):
         for _ in range(abs(b)):
             result /= a
 
-    return result
+    return "{:.17e}".format(result)
