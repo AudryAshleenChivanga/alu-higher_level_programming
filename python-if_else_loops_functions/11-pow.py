@@ -3,4 +3,4 @@
 
 
 def pow(a, b):
-    return round(a ** b, 2)
+    return round(a ** b, 17)
