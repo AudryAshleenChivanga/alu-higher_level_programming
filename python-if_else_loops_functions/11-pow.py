@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# Python3
+# Powers in python
 
 
 def pow(a, b):
-    return (a ** b, 2)
+    return round(a ** b, 2)
