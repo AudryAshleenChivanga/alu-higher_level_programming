@@ -1,34 +1,35 @@
-#!/usr/binpython3
-Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
-
-You can assume the number will be between 1 to 3999.
-def roman_to_int(roman_string) must return an integer
-If the roman_string is not a string or None, return 0
-guillaume@ubuntu:~/$ cat 12-main.py
 #!/usr/bin/python3
-""" Roman to Integer test file
-"""
-roman_to_int = __import__('12-roman_to_int').roman_to_int
+def to_subtract(list_num):
+    to_sub = 0
+    max_list = max(list_num)
 
-roman_number = "X"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+    for n in list_num:
+        if max_list > n:
+            to_sub += n
+    return (max_list - to_sub)
 
-roman_number = "VII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
-roman_number = "IX"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+def roman_to_int(roman_string):
+    if not roman_string:
+        return 0
+    if not isinstance(roman_string, str):
+        return 0
+    rom_n = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    list_keys = list(rom_n.keys())
 
-roman_number = "LXXXVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+    num = 0
+    last_rom = 0
+    list_num = [0]
 
-roman_number = "DCCVII"
-print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+    for ch in roman_string:
+        for r_num in list_keys:
+            if r_num == ch:
+                if rom_n.get(ch) <= last_rom:
+                    num += to_subtract(list_num)
+                    list_num = [rom_n.get(ch)]
+                else:
+                    list_num.append(rom_n.get(ch))
+                last_rom = rom_n.get(ch)
+    num += to_subtract(list_num)
 
-guillaume@ubuntu:~/$ ./12-main.py
-X = 10
-VII = 7
-IX = 9
-LXXXVII = 87
-DCCVII = 707
-guillaume@ubuntu:~/$
+    return (num)
