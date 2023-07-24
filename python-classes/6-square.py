@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Defines a square based on Square5."""
+"""Defines square from square5."""
 
 
 class Square:
@@ -12,8 +12,8 @@ class Square:
             size (int): The size of the new Square (default is 0).
             position (tuple): The position of the square (default is (0, 0)).
         Raises:
-            TypeError:
-            ValueError: 
+            TypeError: If size or position is not an integer/tuple of 2 positive integers.
+            ValueError: If size is less than 0 or if position contains negative integers.
         """
         self.size = size
         self.position = position
@@ -49,8 +49,8 @@ class Square:
         Args:
             value (tuple): The new position of the square as a tuple of 2 positive integers.
         Raises:
-            TypeError:
-            ValueError:
+            TypeError: If position is not a tuple of 2 positive integers.
+            ValueError: If position contains negative integers.
         """
         if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(val, int) for val in value):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -75,5 +75,6 @@ class Square:
 
         for _ in range(self.__position[1]):
             print()
+
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
