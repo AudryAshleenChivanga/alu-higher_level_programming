@@ -2,10 +2,12 @@
 
 """Defines a square based on Square 5."""
 
+
 class Square:
     """Representing a square."""
 
-    def __init__(self, size=0, position=(0, 0)):
+
+def __init__(self, size=0, position=(0, 0)):
         """Initializing a new square.
         Args:
             size (int): The size of the new Square (default is 0).
@@ -59,6 +61,7 @@ class Square:
 
     def area(self):
         """Calculate the area of the square.
+
         Returns:
             int: The area of the square.
         """
