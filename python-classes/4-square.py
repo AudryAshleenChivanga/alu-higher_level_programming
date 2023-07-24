@@ -9,10 +9,8 @@ class Square:
 
     def __init__(self, size=0):
         """Initializing a new square.
-
         Args:
             size (int): The size of the new Square.
-
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -26,12 +24,11 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Set the size of the square.
-
-        Args:
+        """Set the size of the square
+      Args:
             value (int): The new size of the square.
 
-        Raises:
+        Raises:6
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
         """
