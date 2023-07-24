@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 
-"""Defines a square based on Square 5."""
+"""Defines a square based on Square5."""
 
 
 class Square:
     """Representing a square."""
 
-
-def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializing a new square.
         Args:
             size (int): The size of the new Square (default is 0).
@@ -61,7 +60,6 @@ def __init__(self, size=0, position=(0, 0)):
 
     def area(self):
         """Calculate the area of the square.
-
         Returns:
             int: The area of the square.
         """
@@ -74,7 +72,9 @@ def __init__(self, size=0, position=(0, 0)):
         if self.__size == 0:
             print()
             return
+
         for _ in range(self.__position[1]):
             print()
+
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
