@@ -49,8 +49,8 @@ class Square:
         Args:
             value (tuple): The new position of the square as a tuple of 2 positive integers.
         Raises:
-            TypeError: If position is not a tuple of 2 positive integers.
-            ValueError: If position contains negative integers.
+            TypeError:
+            ValueError:
         """
         if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(val, int) for val in value):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -75,6 +75,5 @@ class Square:
 
         for _ in range(self.__position[1]):
             print()
-
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
