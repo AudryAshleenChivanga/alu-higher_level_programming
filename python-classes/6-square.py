@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 
+
 """Defines square from square5."""
 
 
 class Square:
     """Representing a square."""
-
 class Square:
     """Representing a square."""
 
+
     def __init__(self, size=0, position=(0, 0)):
         """Initializing a new square.
-
         Args:
             size (int): The size of the new Square (default is 0).
             position (tuple): The position of the square (default is (0, 0)).
@@ -51,7 +51,6 @@ class Square:
     @position.setter
     def position(self, value):
         """Set the position of the square.
-
         Args:
             value (tuple): The new position of the square as a tuple of 2 positive integers.
         Raises:
@@ -66,7 +65,6 @@ class Square:
 
     def area(self):
         """Calculate the area of the square.
-
         Returns:
             int: The area of the square.
         """
@@ -74,15 +72,12 @@ class Square:
 
     def my_print(self):
         """Print the square using '#' characters.
-
         If size is equal to 0, print an empty line.
         """
         if self.__size == 0:
             print()
             return
-
         for _ in range(self.__position[1]):
             print()
-
         for _ in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+            print(" " * self.__position[0] + "#" * self.__sizei)
