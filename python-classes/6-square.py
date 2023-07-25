@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
+"""Defining square 6 based on square 5."""
 
-"""Defining square6 based on square 5."""
+To ensure the code follows PEP8 validation, we need to make some adjustments. Below is the corrected implementation of the `Square` class according to the given requirements:
 
-
+```python
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
@@ -45,7 +46,7 @@ class Square:
             print()
 
         for _ in range(self.__size):
-            print(" " * self.__position[0], "#" * self.__size)
+            print(" " * self.__position[0] + "#" * self.__size)
 
 if __name__ == "__main__":
     my_square_1 = Square(3)
