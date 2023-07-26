@@ -2,9 +2,6 @@
 
 """Defining square 6 based on square 5."""
 
-To ensure the code follows PEP8 validation, we need to make some adjustments. Below is the corrected implementation of the `Square` class according to the given requirements:
-
-```python
 class Square:
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
@@ -30,7 +27,7 @@ class Square:
     def position(self, value):
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(isinstance(i, int) and i >= 0 for i in value):
+        if not all(isinstance(val, int) and val >= 0 for val in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -48,18 +45,19 @@ class Square:
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
 
-if __name__ == "__main__":
-    my_square_1 = Square(3)
-    my_square_1.my_print()
 
-    print("--")
+# Test cases
+my_square_1 = Square(3)
+my_square_1.my_print()
 
-    my_square_2 = Square(3, (1, 1))
-    my_square_2.my_print()
+print("--")
 
-    print("--")
+my_square_2 = Square(3, (1, 1))
+my_square_2.my_print()
 
-    my_square_3 = Square(3, (3, 0))
-    my_square_3.my_print()
+print("--")
 
-    print("--")
+my_square_3 = Square(3, (3, 0))
+my_square_3.my_print()
+
+print("--")
