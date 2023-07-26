@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
 
+"""This defunes square 6 based on square 5."""
+
 class Square:
-    """A class to define a square."""
+
     def __init__(self, size=0, position=(0, 0)):
         """Initialize the class."""
         self.size = size
