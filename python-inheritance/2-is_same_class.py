@@ -1,12 +1,25 @@
 #!/usr/bin/python3
-"""A list that inhert the list object"""
+""" Function that returns True/False if obj is a type of a_class
+
+    Args:
+        obj: object
+        a_class: class type
+
+    Returns:
+        True if type of obj is a_class
+        False, otherwise
+"""
 
 
-class MyList(list):
-    """Represent a Mylist"""
+def is_same_class(obj, a_class):
+    """ Function that returns True/False if obj is a type of a_class
 
-    def print_sorted(self):
-        '''
-        prints the list, but sorted
-        '''
-        print(sorted(self))
+    Args:
+        obj: object
+        a_class: class type
+
+    Returns:
+        True if type of obj is a_class
+        False, otherwise
+    """
+    return type(obj) is a_class
