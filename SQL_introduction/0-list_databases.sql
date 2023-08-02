@@ -1,2 +1,2 @@
-UPDATE users SET name = 'Holberton' WHERE id = 89;
-
+-- A script that lists all the databases
+SHOW DATABASES;
