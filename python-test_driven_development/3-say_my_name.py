@@ -1,10 +1,19 @@
 #!/usr/bin/python3
-say_my_name = __import__('3-say_my_name').say_my_name
+"""A function that prints the name of a user"""
 
-say_my_name("John", "Smith")
-say_my_name("Walter", "White")
-say_my_name("Bob")
-try:
-    say_my_name(12, "White")
-except Exception as e:
-    print(e)
+
+def say_my_name(first_name, last_name=""):
+    '''Function to take in names and prints all name
+    Args:
+        first_name : this is the first arg in a string format
+        last_name : must be a string too
+
+    Returns:
+        My name is <first name> <last name>
+    '''
+    if type(first_name) != str:
+        raise TypeError("first_name must be a string")
+    if type(last_name) != str:
+        raise TypeError("last_name must be a string")
+
+    print("My name is {} {}".format(first_name, last_name))
