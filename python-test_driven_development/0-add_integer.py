@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""
-This module supplies one function.
-"""
+add_integer = __import__('0-add_integer').add_integer
 
-
-def add_integer(a, b):
-    """The addition of 2 numbers."""
-    if type(a) is not int and type(a) is not float:
-        raise TypeError("a must be an integer")
-    if type(b) is not int and type(b) is not float:
-        raise TypeError("b must be an integer")
-    if type(a) is float:
-        a = int(a)
-    if type(b) is float:
-        b = int(b)
-    return a + b
+print(add_integer(1, 2))
+print(add_integer(100, -2))
+print(add_integer(2))
+print(add_integer(100.3, -2))
+try:
+    print(add_integer(4, "School"))
+except Exception as e:
+    print(e)
+try:
+    print(add_integer(None))
+except Exception as e:
+    print(e)
